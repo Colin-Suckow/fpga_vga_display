@@ -1,0 +1,29 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "h_sync",
+					"strict" : false
+				},
+				{
+					"name" : "v_sync",
+					"strict" : false
+				},
+				{
+					"name" : "green",
+					"strict" : false
+				},
+				{
+					"name" : "blue",
+					"strict" : false
+				},
+				{
+					"name" : "red",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
