@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top
-Tue Mar 24 15:15:16 2020
+Tue Mar 24 20:34:56 2020
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -14,23 +14,19 @@ Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
-  9. Analysis & Synthesis DSP Block Usage Summary
- 10. Analysis & Synthesis IP Cores Summary
- 11. General Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Source assignments for screen_rom:screen|altsyncram:altsyncram_component|altsyncram_r8c1:auto_generated
- 14. Parameter Settings for User Entity Instance: pixel_pll:pll|altpll:altpll_component
- 15. Parameter Settings for User Entity Instance: screen_rom:screen|altsyncram:altsyncram_component
- 16. Parameter Settings for Inferred Entity Instance: lpm_divide:Div0
- 17. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0
- 18. altpll Parameter Settings by Entity Instance
- 19. altsyncram Parameter Settings by Entity Instance
- 20. lpm_mult Parameter Settings by Entity Instance
- 21. Port Connectivity Checks: "screen_rom:screen"
- 22. Port Connectivity Checks: "pixel_pll:pll"
- 23. Post-Synthesis Netlist Statistics for Top Partition
- 24. Elapsed Time Per Partition
- 25. Analysis & Synthesis Messages
+  9. Analysis & Synthesis IP Cores Summary
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Source assignments for screen_rom:screen|altsyncram:altsyncram_component|altsyncram_e8a1:auto_generated
+ 13. Parameter Settings for User Entity Instance: pixel_pll:pll|altpll:altpll_component
+ 14. Parameter Settings for User Entity Instance: screen_rom:screen|altsyncram:altsyncram_component
+ 15. altpll Parameter Settings by Entity Instance
+ 16. altsyncram Parameter Settings by Entity Instance
+ 17. Port Connectivity Checks: "screen_rom:screen"
+ 18. Port Connectivity Checks: "pixel_pll:pll"
+ 19. Post-Synthesis Netlist Statistics for Top Partition
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
 
 
 
@@ -57,19 +53,19 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Mar 24 15:15:16 2020       ;
+; Analysis & Synthesis Status        ; Successful - Tue Mar 24 20:34:56 2020       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; top                                         ;
 ; Top-level Entity Name              ; top                                         ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 569                                         ;
-;     Total combinational functions  ; 566                                         ;
+; Total logic elements               ; 206                                         ;
+;     Total combinational functions  ; 203                                         ;
 ;     Dedicated logic registers      ; 72                                          ;
 ; Total registers                    ; 72                                          ;
 ; Total pins                         ; 6                                           ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 38,400                                      ;
-; Embedded Multiplier 9-bit elements ; 4                                           ;
+; Total memory bits                  ; 320,000                                     ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
 ; Total PLLs                         ; 1                                           ;
 ; UFM blocks                         ; 0                                           ;
 ; ADC blocks                         ; 0                                           ;
@@ -175,52 +171,38 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
+;     Processor 2            ;   0.0%      ;
 ;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                       ;
-+-------------------------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                          ; Library ;
-+-------------------------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------+---------+
-; top.v                                           ; yes             ; User Verilog HDL File                  ; /home/colin/Development/fpga/blinky/top.v                                             ;         ;
-; pixel_pll.v                                     ; yes             ; User Wizard-Generated File             ; /home/colin/Development/fpga/blinky/pixel_pll.v                                       ;         ;
-; screen_rom.v                                    ; yes             ; User Wizard-Generated File             ; /home/colin/Development/fpga/blinky/screen_rom.v                                      ;         ;
-; altpll.tdf                                      ; yes             ; Megafunction                           ; /home/colin/intelFPGA_lite/19.1/quartus/libraries/megafunctions/altpll.tdf            ;         ;
-; aglobal191.inc                                  ; yes             ; Megafunction                           ; /home/colin/intelFPGA_lite/19.1/quartus/libraries/megafunctions/aglobal191.inc        ;         ;
-; stratix_pll.inc                                 ; yes             ; Megafunction                           ; /home/colin/intelFPGA_lite/19.1/quartus/libraries/megafunctions/stratix_pll.inc       ;         ;
-; stratixii_pll.inc                               ; yes             ; Megafunction                           ; /home/colin/intelFPGA_lite/19.1/quartus/libraries/megafunctions/stratixii_pll.inc     ;         ;
-; cycloneii_pll.inc                               ; yes             ; Megafunction                           ; /home/colin/intelFPGA_lite/19.1/quartus/libraries/megafunctions/cycloneii_pll.inc     ;         ;
-; db/pixel_pll_altpll.v                           ; yes             ; Auto-Generated Megafunction            ; /home/colin/Development/fpga/blinky/db/pixel_pll_altpll.v                             ;         ;
-; altsyncram.tdf                                  ; yes             ; Megafunction                           ; /home/colin/intelFPGA_lite/19.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
-; stratix_ram_block.inc                           ; yes             ; Megafunction                           ; /home/colin/intelFPGA_lite/19.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
-; lpm_mux.inc                                     ; yes             ; Megafunction                           ; /home/colin/intelFPGA_lite/19.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
-; lpm_decode.inc                                  ; yes             ; Megafunction                           ; /home/colin/intelFPGA_lite/19.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
-; a_rdenreg.inc                                   ; yes             ; Megafunction                           ; /home/colin/intelFPGA_lite/19.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
-; altrom.inc                                      ; yes             ; Megafunction                           ; /home/colin/intelFPGA_lite/19.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
-; altram.inc                                      ; yes             ; Megafunction                           ; /home/colin/intelFPGA_lite/19.1/quartus/libraries/megafunctions/altram.inc            ;         ;
-; altdpram.inc                                    ; yes             ; Megafunction                           ; /home/colin/intelFPGA_lite/19.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_r8c1.tdf                          ; yes             ; Auto-Generated Megafunction            ; /home/colin/Development/fpga/blinky/db/altsyncram_r8c1.tdf                            ;         ;
-; /home/colin/Development/python/vga_fpga/out.hex ; yes             ; Auto-Found Memory Initialization File  ; /home/colin/Development/python/vga_fpga/out.hex                                       ;         ;
-; db/decode_7j9.tdf                               ; yes             ; Auto-Generated Megafunction            ; /home/colin/Development/fpga/blinky/db/decode_7j9.tdf                                 ;         ;
-; db/mux_p1b.tdf                                  ; yes             ; Auto-Generated Megafunction            ; /home/colin/Development/fpga/blinky/db/mux_p1b.tdf                                    ;         ;
-; lpm_divide.tdf                                  ; yes             ; Megafunction                           ; /home/colin/intelFPGA_lite/19.1/quartus/libraries/megafunctions/lpm_divide.tdf        ;         ;
-; abs_divider.inc                                 ; yes             ; Megafunction                           ; /home/colin/intelFPGA_lite/19.1/quartus/libraries/megafunctions/abs_divider.inc       ;         ;
-; sign_div_unsign.inc                             ; yes             ; Megafunction                           ; /home/colin/intelFPGA_lite/19.1/quartus/libraries/megafunctions/sign_div_unsign.inc   ;         ;
-; db/lpm_divide_mtl.tdf                           ; yes             ; Auto-Generated Megafunction            ; /home/colin/Development/fpga/blinky/db/lpm_divide_mtl.tdf                             ;         ;
-; db/sign_div_unsign_olh.tdf                      ; yes             ; Auto-Generated Megafunction            ; /home/colin/Development/fpga/blinky/db/sign_div_unsign_olh.tdf                        ;         ;
-; db/alt_u_div_qhe.tdf                            ; yes             ; Auto-Generated Megafunction            ; /home/colin/Development/fpga/blinky/db/alt_u_div_qhe.tdf                              ;         ;
-; db/add_sub_t3c.tdf                              ; yes             ; Auto-Generated Megafunction            ; /home/colin/Development/fpga/blinky/db/add_sub_t3c.tdf                                ;         ;
-; db/add_sub_u3c.tdf                              ; yes             ; Auto-Generated Megafunction            ; /home/colin/Development/fpga/blinky/db/add_sub_u3c.tdf                                ;         ;
-; lpm_mult.tdf                                    ; yes             ; Megafunction                           ; /home/colin/intelFPGA_lite/19.1/quartus/libraries/megafunctions/lpm_mult.tdf          ;         ;
-; lpm_add_sub.inc                                 ; yes             ; Megafunction                           ; /home/colin/intelFPGA_lite/19.1/quartus/libraries/megafunctions/lpm_add_sub.inc       ;         ;
-; multcore.inc                                    ; yes             ; Megafunction                           ; /home/colin/intelFPGA_lite/19.1/quartus/libraries/megafunctions/multcore.inc          ;         ;
-; bypassff.inc                                    ; yes             ; Megafunction                           ; /home/colin/intelFPGA_lite/19.1/quartus/libraries/megafunctions/bypassff.inc          ;         ;
-; altshift.inc                                    ; yes             ; Megafunction                           ; /home/colin/intelFPGA_lite/19.1/quartus/libraries/megafunctions/altshift.inc          ;         ;
-; db/mult_brs.tdf                                 ; yes             ; Auto-Generated Megafunction            ; /home/colin/Development/fpga/blinky/db/mult_brs.tdf                                   ;         ;
-+-------------------------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                        ;
++----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                          ; Library ;
++----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------+---------+
+; top.v                            ; yes             ; User Verilog HDL File                  ; /home/colin/Development/fpga/blinky/top.v                                             ;         ;
+; pixel_pll.v                      ; yes             ; User Wizard-Generated File             ; /home/colin/Development/fpga/blinky/pixel_pll.v                                       ;         ;
+; screen_rom.v                     ; yes             ; User Wizard-Generated File             ; /home/colin/Development/fpga/blinky/screen_rom.v                                      ;         ;
+; altpll.tdf                       ; yes             ; Megafunction                           ; /home/colin/intelFPGA_lite/19.1/quartus/libraries/megafunctions/altpll.tdf            ;         ;
+; aglobal191.inc                   ; yes             ; Megafunction                           ; /home/colin/intelFPGA_lite/19.1/quartus/libraries/megafunctions/aglobal191.inc        ;         ;
+; stratix_pll.inc                  ; yes             ; Megafunction                           ; /home/colin/intelFPGA_lite/19.1/quartus/libraries/megafunctions/stratix_pll.inc       ;         ;
+; stratixii_pll.inc                ; yes             ; Megafunction                           ; /home/colin/intelFPGA_lite/19.1/quartus/libraries/megafunctions/stratixii_pll.inc     ;         ;
+; cycloneii_pll.inc                ; yes             ; Megafunction                           ; /home/colin/intelFPGA_lite/19.1/quartus/libraries/megafunctions/cycloneii_pll.inc     ;         ;
+; db/pixel_pll_altpll.v            ; yes             ; Auto-Generated Megafunction            ; /home/colin/Development/fpga/blinky/db/pixel_pll_altpll.v                             ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; /home/colin/intelFPGA_lite/19.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; /home/colin/intelFPGA_lite/19.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; /home/colin/intelFPGA_lite/19.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; /home/colin/intelFPGA_lite/19.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; /home/colin/intelFPGA_lite/19.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; /home/colin/intelFPGA_lite/19.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; /home/colin/intelFPGA_lite/19.1/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; /home/colin/intelFPGA_lite/19.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_e8a1.tdf           ; yes             ; Auto-Generated Megafunction            ; /home/colin/Development/fpga/blinky/db/altsyncram_e8a1.tdf                            ;         ;
+; ../../python/vga_fpga/out.hex    ; yes             ; Auto-Found Memory Initialization File  ; /home/colin/Development/python/vga_fpga/out.hex                                       ;         ;
+; db/decode_7j9.tdf                ; yes             ; Auto-Generated Megafunction            ; /home/colin/Development/fpga/blinky/db/decode_7j9.tdf                                 ;         ;
+; db/mux_u1b.tdf                   ; yes             ; Auto-Generated Megafunction            ; /home/colin/Development/fpga/blinky/db/mux_u1b.tdf                                    ;         ;
++----------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------+
@@ -228,86 +210,62 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                  ;
 +---------------------------------------------+----------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 569                                                                                    ;
+; Estimated Total logic elements              ; 206                                                                                    ;
 ;                                             ;                                                                                        ;
-; Total combinational functions               ; 566                                                                                    ;
+; Total combinational functions               ; 203                                                                                    ;
 ; Logic element usage by number of LUT inputs ;                                                                                        ;
-;     -- 4 input functions                    ; 93                                                                                     ;
-;     -- 3 input functions                    ; 161                                                                                    ;
-;     -- <=2 input functions                  ; 312                                                                                    ;
+;     -- 4 input functions                    ; 54                                                                                     ;
+;     -- 3 input functions                    ; 60                                                                                     ;
+;     -- <=2 input functions                  ; 89                                                                                     ;
 ;                                             ;                                                                                        ;
 ; Logic elements by mode                      ;                                                                                        ;
-;     -- normal mode                          ; 307                                                                                    ;
-;     -- arithmetic mode                      ; 259                                                                                    ;
+;     -- normal mode                          ; 106                                                                                    ;
+;     -- arithmetic mode                      ; 97                                                                                     ;
 ;                                             ;                                                                                        ;
 ; Total registers                             ; 72                                                                                     ;
 ;     -- Dedicated logic registers            ; 72                                                                                     ;
 ;     -- I/O registers                        ; 0                                                                                      ;
 ;                                             ;                                                                                        ;
 ; I/O pins                                    ; 6                                                                                      ;
-; Total memory bits                           ; 38400                                                                                  ;
+; Total memory bits                           ; 320000                                                                                 ;
 ;                                             ;                                                                                        ;
-; Embedded Multiplier 9-bit elements          ; 4                                                                                      ;
+; Embedded Multiplier 9-bit elements          ; 0                                                                                      ;
 ;                                             ;                                                                                        ;
 ; Total PLLs                                  ; 1                                                                                      ;
 ;     -- PLLs                                 ; 1                                                                                      ;
 ;                                             ;                                                                                        ;
 ; Maximum fan-out node                        ; pixel_pll:pll|altpll:altpll_component|pixel_pll_altpll:auto_generated|wire_pll1_clk[0] ;
-; Maximum fan-out                             ; 78                                                                                     ;
-; Total fan-out                               ; 1702                                                                                   ;
-; Average fan-out                             ; 2.58                                                                                   ;
+; Maximum fan-out                             ; 113                                                                                    ;
+; Total fan-out                               ; 1366                                                                                   ;
+; Average fan-out                             ; 4.16                                                                                   ;
 +---------------------------------------------+----------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                 ;
-+--------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; Compilation Hierarchy Node                 ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                          ; Entity Name         ; Library Name ;
-+--------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |top                                       ; 566 (194)           ; 72 (66)                   ; 38400       ; 0          ; 4            ; 0       ; 2         ; 6    ; 0            ; 0          ; |top                                                                                                         ; top                 ; work         ;
-;    |lpm_divide:Div0|                       ; 347 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|lpm_divide:Div0                                                                                         ; lpm_divide          ; work         ;
-;       |lpm_divide_mtl:auto_generated|      ; 347 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|lpm_divide:Div0|lpm_divide_mtl:auto_generated                                                           ; lpm_divide_mtl      ; work         ;
-;          |sign_div_unsign_olh:divider|     ; 347 (0)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|lpm_divide:Div0|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider                               ; sign_div_unsign_olh ; work         ;
-;             |alt_u_div_qhe:divider|        ; 347 (347)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|lpm_divide:Div0|lpm_divide_mtl:auto_generated|sign_div_unsign_olh:divider|alt_u_div_qhe:divider         ; alt_u_div_qhe       ; work         ;
-;    |lpm_mult:Mult0|                        ; 15 (0)              ; 0 (0)                     ; 0           ; 0          ; 4            ; 0       ; 2         ; 0    ; 0            ; 0          ; |top|lpm_mult:Mult0                                                                                          ; lpm_mult            ; work         ;
-;       |mult_brs:auto_generated|            ; 15 (15)             ; 0 (0)                     ; 0           ; 0          ; 4            ; 0       ; 2         ; 0    ; 0            ; 0          ; |top|lpm_mult:Mult0|mult_brs:auto_generated                                                                  ; mult_brs            ; work         ;
-;    |pixel_pll:pll|                         ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|pixel_pll:pll                                                                                           ; pixel_pll           ; work         ;
-;       |altpll:altpll_component|            ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|pixel_pll:pll|altpll:altpll_component                                                                   ; altpll              ; work         ;
-;          |pixel_pll_altpll:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|pixel_pll:pll|altpll:altpll_component|pixel_pll_altpll:auto_generated                                   ; pixel_pll_altpll    ; work         ;
-;    |screen_rom:screen|                     ; 10 (0)              ; 6 (0)                     ; 38400       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|screen_rom:screen                                                                                       ; screen_rom          ; work         ;
-;       |altsyncram:altsyncram_component|    ; 10 (0)              ; 6 (0)                     ; 38400       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|screen_rom:screen|altsyncram:altsyncram_component                                                       ; altsyncram          ; work         ;
-;          |altsyncram_r8c1:auto_generated|  ; 10 (3)              ; 6 (6)                     ; 38400       ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|screen_rom:screen|altsyncram:altsyncram_component|altsyncram_r8c1:auto_generated                        ; altsyncram_r8c1     ; work         ;
-;             |decode_7j9:rden_decode|       ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|screen_rom:screen|altsyncram:altsyncram_component|altsyncram_r8c1:auto_generated|decode_7j9:rden_decode ; decode_7j9          ; work         ;
-;             |mux_p1b:mux2|                 ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|screen_rom:screen|altsyncram:altsyncram_component|altsyncram_r8c1:auto_generated|mux_p1b:mux2           ; mux_p1b             ; work         ;
-+--------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------------+---------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                              ;
++--------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------------+------------------+--------------+
+; Compilation Hierarchy Node                 ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                          ; Entity Name      ; Library Name ;
++--------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------------+------------------+--------------+
+; |top                                       ; 203 (174)           ; 72 (66)                   ; 320000      ; 0          ; 0            ; 0       ; 0         ; 6    ; 0            ; 0          ; |top                                                                                                         ; top              ; work         ;
+;    |pixel_pll:pll|                         ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|pixel_pll:pll                                                                                           ; pixel_pll        ; work         ;
+;       |altpll:altpll_component|            ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|pixel_pll:pll|altpll:altpll_component                                                                   ; altpll           ; work         ;
+;          |pixel_pll_altpll:auto_generated| ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|pixel_pll:pll|altpll:altpll_component|pixel_pll_altpll:auto_generated                                   ; pixel_pll_altpll ; work         ;
+;    |screen_rom:screen|                     ; 29 (0)              ; 6 (0)                     ; 320000      ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|screen_rom:screen                                                                                       ; screen_rom       ; work         ;
+;       |altsyncram:altsyncram_component|    ; 29 (0)              ; 6 (0)                     ; 320000      ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|screen_rom:screen|altsyncram:altsyncram_component                                                       ; altsyncram       ; work         ;
+;          |altsyncram_e8a1:auto_generated|  ; 29 (0)              ; 6 (6)                     ; 320000      ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|screen_rom:screen|altsyncram:altsyncram_component|altsyncram_e8a1:auto_generated                        ; altsyncram_e8a1  ; work         ;
+;             |decode_7j9:rden_decode|       ; 5 (5)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|screen_rom:screen|altsyncram:altsyncram_component|altsyncram_e8a1:auto_generated|decode_7j9:rden_decode ; decode_7j9       ; work         ;
+;             |mux_u1b:mux2|                 ; 24 (24)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|screen_rom:screen|altsyncram:altsyncram_component|altsyncram_e8a1:auto_generated|mux_u1b:mux2           ; mux_u1b          ; work         ;
++--------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------------------------------------------------------------+------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                                 ;
-+---------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------+-------------------------------------------------+
-; Name                                                                                        ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF                                             ;
-+---------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------+-------------------------------------------------+
-; screen_rom:screen|altsyncram:altsyncram_component|altsyncram_r8c1:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 38400        ; 3            ; --           ; --           ; 115200 ; /home/colin/Development/python/vga_fpga/out.hex ;
-+---------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------+-------------------------------------------------+
-
-
-+-----------------------------------------------------+
-; Analysis & Synthesis DSP Block Usage Summary        ;
-+---------------------------------------+-------------+
-; Statistic                             ; Number Used ;
-+---------------------------------------+-------------+
-; Simple Multipliers (9-bit)            ; 0           ;
-; Simple Multipliers (18-bit)           ; 2           ;
-; Embedded Multiplier Blocks            ; --          ;
-; Embedded Multiplier 9-bit elements    ; 4           ;
-; Signed Embedded Multipliers           ; 0           ;
-; Unsigned Embedded Multipliers         ; 2           ;
-; Mixed Sign Embedded Multipliers       ; 0           ;
-; Variable Sign Embedded Multipliers    ; 0           ;
-; Dedicated Input Shift Register Chains ; 0           ;
-+---------------------------------------+-------------+
-Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                               ;
++---------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------+-------------------------------+
+; Name                                                                                        ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF                           ;
++---------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------+-------------------------------+
+; screen_rom:screen|altsyncram:altsyncram_component|altsyncram_e8a1:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 40000        ; 8            ; --           ; --           ; 320000 ; ../../python/vga_fpga/out.hex ;
++---------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------+-------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------+
@@ -345,7 +303,7 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 
 
 +---------------------------------------------------------------------------------------------------------+
-; Source assignments for screen_rom:screen|altsyncram:altsyncram_component|altsyncram_r8c1:auto_generated ;
+; Source assignments for screen_rom:screen|altsyncram:altsyncram_component|altsyncram_e8a1:auto_generated ;
 +---------------------------------+--------------------+------+-------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                        ;
 +---------------------------------+--------------------+------+-------------------------------------------+
@@ -727,122 +685,64 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: screen_rom:screen|altsyncram:altsyncram_component        ;
-+------------------------------------+-------------------------------------------------+----------------+
-; Parameter Name                     ; Value                                           ; Type           ;
-+------------------------------------+-------------------------------------------------+----------------+
-; BYTE_SIZE_BLOCK                    ; 8                                               ; Untyped        ;
-; AUTO_CARRY_CHAINS                  ; ON                                              ; AUTO_CARRY     ;
-; IGNORE_CARRY_BUFFERS               ; OFF                                             ; IGNORE_CARRY   ;
-; AUTO_CASCADE_CHAINS                ; ON                                              ; AUTO_CASCADE   ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                                             ; IGNORE_CASCADE ;
-; WIDTH_BYTEENA                      ; 1                                               ; Untyped        ;
-; OPERATION_MODE                     ; ROM                                             ; Untyped        ;
-; WIDTH_A                            ; 3                                               ; Signed Integer ;
-; WIDTHAD_A                          ; 16                                              ; Signed Integer ;
-; NUMWORDS_A                         ; 38400                                           ; Signed Integer ;
-; OUTDATA_REG_A                      ; CLOCK0                                          ; Untyped        ;
-; ADDRESS_ACLR_A                     ; NONE                                            ; Untyped        ;
-; OUTDATA_ACLR_A                     ; NONE                                            ; Untyped        ;
-; WRCONTROL_ACLR_A                   ; NONE                                            ; Untyped        ;
-; INDATA_ACLR_A                      ; NONE                                            ; Untyped        ;
-; BYTEENA_ACLR_A                     ; NONE                                            ; Untyped        ;
-; WIDTH_B                            ; 1                                               ; Untyped        ;
-; WIDTHAD_B                          ; 1                                               ; Untyped        ;
-; NUMWORDS_B                         ; 1                                               ; Untyped        ;
-; INDATA_REG_B                       ; CLOCK1                                          ; Untyped        ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                                          ; Untyped        ;
-; RDCONTROL_REG_B                    ; CLOCK1                                          ; Untyped        ;
-; ADDRESS_REG_B                      ; CLOCK1                                          ; Untyped        ;
-; OUTDATA_REG_B                      ; UNREGISTERED                                    ; Untyped        ;
-; BYTEENA_REG_B                      ; CLOCK1                                          ; Untyped        ;
-; INDATA_ACLR_B                      ; NONE                                            ; Untyped        ;
-; WRCONTROL_ACLR_B                   ; NONE                                            ; Untyped        ;
-; ADDRESS_ACLR_B                     ; NONE                                            ; Untyped        ;
-; OUTDATA_ACLR_B                     ; NONE                                            ; Untyped        ;
-; RDCONTROL_ACLR_B                   ; NONE                                            ; Untyped        ;
-; BYTEENA_ACLR_B                     ; NONE                                            ; Untyped        ;
-; WIDTH_BYTEENA_A                    ; 1                                               ; Signed Integer ;
-; WIDTH_BYTEENA_B                    ; 1                                               ; Untyped        ;
-; RAM_BLOCK_TYPE                     ; AUTO                                            ; Untyped        ;
-; BYTE_SIZE                          ; 8                                               ; Untyped        ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                       ; Untyped        ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                            ; Untyped        ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                            ; Untyped        ;
-; INIT_FILE                          ; /home/colin/Development/python/vga_fpga/out.hex ; Untyped        ;
-; INIT_FILE_LAYOUT                   ; PORT_A                                          ; Untyped        ;
-; MAXIMUM_DEPTH                      ; 0                                               ; Untyped        ;
-; CLOCK_ENABLE_INPUT_A               ; BYPASS                                          ; Untyped        ;
-; CLOCK_ENABLE_INPUT_B               ; NORMAL                                          ; Untyped        ;
-; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                                          ; Untyped        ;
-; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                                          ; Untyped        ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                                 ; Untyped        ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                                 ; Untyped        ;
-; ENABLE_ECC                         ; FALSE                                           ; Untyped        ;
-; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                                           ; Untyped        ;
-; WIDTH_ECCSTATUS                    ; 3                                               ; Untyped        ;
-; DEVICE_FAMILY                      ; MAX 10                                          ; Untyped        ;
-; CBXI_PARAMETER                     ; altsyncram_r8c1                                 ; Untyped        ;
-+------------------------------------+-------------------------------------------------+----------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_divide:Div0 ;
-+------------------------+----------------+------------------------+
-; Parameter Name         ; Value          ; Type                   ;
-+------------------------+----------------+------------------------+
-; LPM_WIDTHN             ; 33             ; Untyped                ;
-; LPM_WIDTHD             ; 3              ; Untyped                ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                ;
-; LPM_PIPELINE           ; 0              ; Untyped                ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                ;
-; CBXI_PARAMETER         ; lpm_divide_mtl ; Untyped                ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY             ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY           ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE           ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE         ;
-+------------------------+----------------+------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0                 ;
-+------------------------------------------------+----------+---------------------+
-; Parameter Name                                 ; Value    ; Type                ;
-+------------------------------------------------+----------+---------------------+
-; AUTO_CARRY_CHAINS                              ; ON       ; AUTO_CARRY          ;
-; IGNORE_CARRY_BUFFERS                           ; OFF      ; IGNORE_CARRY        ;
-; AUTO_CASCADE_CHAINS                            ; ON       ; AUTO_CASCADE        ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF      ; IGNORE_CASCADE      ;
-; LPM_WIDTHA                                     ; 33       ; Untyped             ;
-; LPM_WIDTHB                                     ; 10       ; Untyped             ;
-; LPM_WIDTHP                                     ; 43       ; Untyped             ;
-; LPM_WIDTHR                                     ; 43       ; Untyped             ;
-; LPM_WIDTHS                                     ; 1        ; Untyped             ;
-; LPM_REPRESENTATION                             ; UNSIGNED ; Untyped             ;
-; LPM_PIPELINE                                   ; 0        ; Untyped             ;
-; LATENCY                                        ; 0        ; Untyped             ;
-; INPUT_A_IS_CONSTANT                            ; NO       ; Untyped             ;
-; INPUT_B_IS_CONSTANT                            ; YES      ; Untyped             ;
-; USE_EAB                                        ; OFF      ; Untyped             ;
-; MAXIMIZE_SPEED                                 ; 5        ; Untyped             ;
-; DEVICE_FAMILY                                  ; MAX 10   ; Untyped             ;
-; CARRY_CHAIN                                    ; MANUAL   ; Untyped             ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT      ; TECH_MAPPER_APEX20K ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO     ; Untyped             ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0        ; Untyped             ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0        ; Untyped             ;
-; CBXI_PARAMETER                                 ; mult_brs ; Untyped             ;
-; INPUT_A_FIXED_VALUE                            ; Bx       ; Untyped             ;
-; INPUT_B_FIXED_VALUE                            ; Bx       ; Untyped             ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF      ; Untyped             ;
-+------------------------------------------------+----------+---------------------+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: screen_rom:screen|altsyncram:altsyncram_component ;
++------------------------------------+-------------------------------+---------------------------+
+; Parameter Name                     ; Value                         ; Type                      ;
++------------------------------------+-------------------------------+---------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                             ; Untyped                   ;
+; AUTO_CARRY_CHAINS                  ; ON                            ; AUTO_CARRY                ;
+; IGNORE_CARRY_BUFFERS               ; OFF                           ; IGNORE_CARRY              ;
+; AUTO_CASCADE_CHAINS                ; ON                            ; AUTO_CASCADE              ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                           ; IGNORE_CASCADE            ;
+; WIDTH_BYTEENA                      ; 1                             ; Untyped                   ;
+; OPERATION_MODE                     ; ROM                           ; Untyped                   ;
+; WIDTH_A                            ; 8                             ; Signed Integer            ;
+; WIDTHAD_A                          ; 16                            ; Signed Integer            ;
+; NUMWORDS_A                         ; 40000                         ; Signed Integer            ;
+; OUTDATA_REG_A                      ; CLOCK0                        ; Untyped                   ;
+; ADDRESS_ACLR_A                     ; NONE                          ; Untyped                   ;
+; OUTDATA_ACLR_A                     ; NONE                          ; Untyped                   ;
+; WRCONTROL_ACLR_A                   ; NONE                          ; Untyped                   ;
+; INDATA_ACLR_A                      ; NONE                          ; Untyped                   ;
+; BYTEENA_ACLR_A                     ; NONE                          ; Untyped                   ;
+; WIDTH_B                            ; 1                             ; Untyped                   ;
+; WIDTHAD_B                          ; 1                             ; Untyped                   ;
+; NUMWORDS_B                         ; 1                             ; Untyped                   ;
+; INDATA_REG_B                       ; CLOCK1                        ; Untyped                   ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                        ; Untyped                   ;
+; RDCONTROL_REG_B                    ; CLOCK1                        ; Untyped                   ;
+; ADDRESS_REG_B                      ; CLOCK1                        ; Untyped                   ;
+; OUTDATA_REG_B                      ; UNREGISTERED                  ; Untyped                   ;
+; BYTEENA_REG_B                      ; CLOCK1                        ; Untyped                   ;
+; INDATA_ACLR_B                      ; NONE                          ; Untyped                   ;
+; WRCONTROL_ACLR_B                   ; NONE                          ; Untyped                   ;
+; ADDRESS_ACLR_B                     ; NONE                          ; Untyped                   ;
+; OUTDATA_ACLR_B                     ; NONE                          ; Untyped                   ;
+; RDCONTROL_ACLR_B                   ; NONE                          ; Untyped                   ;
+; BYTEENA_ACLR_B                     ; NONE                          ; Untyped                   ;
+; WIDTH_BYTEENA_A                    ; 1                             ; Signed Integer            ;
+; WIDTH_BYTEENA_B                    ; 1                             ; Untyped                   ;
+; RAM_BLOCK_TYPE                     ; AUTO                          ; Untyped                   ;
+; BYTE_SIZE                          ; 8                             ; Untyped                   ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                     ; Untyped                   ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ          ; Untyped                   ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ          ; Untyped                   ;
+; INIT_FILE                          ; ../../python/vga_fpga/out.hex ; Untyped                   ;
+; INIT_FILE_LAYOUT                   ; PORT_A                        ; Untyped                   ;
+; MAXIMUM_DEPTH                      ; 0                             ; Untyped                   ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS                        ; Untyped                   ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                        ; Untyped                   ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                        ; Untyped                   ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                        ; Untyped                   ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN               ; Untyped                   ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN               ; Untyped                   ;
+; ENABLE_ECC                         ; FALSE                         ; Untyped                   ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                         ; Untyped                   ;
+; WIDTH_ECCSTATUS                    ; 3                             ; Untyped                   ;
+; DEVICE_FAMILY                      ; MAX 10                        ; Untyped                   ;
+; CBXI_PARAMETER                     ; altsyncram_e8a1               ; Untyped                   ;
++------------------------------------+-------------------------------+---------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -871,8 +771,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Number of entity instances                ; 1                                                 ;
 ; Entity Instance                           ; screen_rom:screen|altsyncram:altsyncram_component ;
 ;     -- OPERATION_MODE                     ; ROM                                               ;
-;     -- WIDTH_A                            ; 3                                                 ;
-;     -- NUMWORDS_A                         ; 38400                                             ;
+;     -- WIDTH_A                            ; 8                                                 ;
+;     -- NUMWORDS_A                         ; 40000                                             ;
 ;     -- OUTDATA_REG_A                      ; CLOCK0                                            ;
 ;     -- WIDTH_B                            ; 1                                                 ;
 ;     -- NUMWORDS_B                         ; 1                                                 ;
@@ -883,34 +783,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+---------------------------------------------------+
 
 
-+--------------------------------------------------------+
-; lpm_mult Parameter Settings by Entity Instance         ;
-+---------------------------------------+----------------+
-; Name                                  ; Value          ;
-+---------------------------------------+----------------+
-; Number of entity instances            ; 1              ;
-; Entity Instance                       ; lpm_mult:Mult0 ;
-;     -- LPM_WIDTHA                     ; 33             ;
-;     -- LPM_WIDTHB                     ; 10             ;
-;     -- LPM_WIDTHP                     ; 43             ;
-;     -- LPM_REPRESENTATION             ; UNSIGNED       ;
-;     -- INPUT_A_IS_CONSTANT            ; NO             ;
-;     -- INPUT_B_IS_CONSTANT            ; YES            ;
-;     -- USE_EAB                        ; OFF            ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO           ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx             ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx             ;
-+---------------------------------------+----------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "screen_rom:screen"                                                                                                                                                                     ;
-+---------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                                                                                                                             ;
-+---------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; address ; Input  ; Warning  ; Input port expression (33 bits) is wider than the input port (16 bits) it drives.  The 17 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; q[2..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                 ;
-+---------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "screen_rom:screen"                                                                                                                                                                    ;
++---------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                             ;
++---------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; address ; Input ; Warning  ; Input port expression (33 bits) is wider than the input port (16 bits) it drives.  The 17 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
++---------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------+
@@ -932,23 +811,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA               ; 5                           ;
 ;     SCLR              ; 33                          ;
 ;     plain             ; 34                          ;
-; cycloneiii_lcell_comb ; 566                         ;
-;     arith             ; 259                         ;
-;         2 data inputs ; 131                         ;
-;         3 data inputs ; 128                         ;
-;     normal            ; 307                         ;
-;         0 data inputs ; 31                          ;
-;         1 data inputs ; 20                          ;
-;         2 data inputs ; 130                         ;
-;         3 data inputs ; 33                          ;
-;         4 data inputs ; 93                          ;
-; cycloneiii_mac_mult   ; 2                           ;
-; cycloneiii_mac_out    ; 2                           ;
+; cycloneiii_lcell_comb ; 203                         ;
+;     arith             ; 97                          ;
+;         2 data inputs ; 77                          ;
+;         3 data inputs ; 20                          ;
+;     normal            ; 106                         ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 9                           ;
+;         3 data inputs ; 40                          ;
+;         4 data inputs ; 54                          ;
 ; cycloneiii_pll        ; 1                           ;
-; cycloneiii_ram_block  ; 5                           ;
+; cycloneiii_ram_block  ; 40                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 75.80                       ;
-; Average LUT depth     ; 49.46                       ;
+; Max LUT depth         ; 7.00                        ;
+; Average LUT depth     ; 4.45                        ;
 +-----------------------+-----------------------------+
 
 
@@ -957,7 +833,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -967,7 +843,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Tue Mar 24 15:15:07 2020
+    Info: Processing started: Tue Mar 24 20:34:48 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -978,7 +854,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file pixel_p
 Info (12021): Found 1 design units, including 1 entities, in source file screen_rom.v
     Info (12023): Found entity 1: screen_rom File: /home/colin/Development/fpga/blinky/screen_rom.v Line: 40
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Info (12128): Elaborating entity "pixel_pll" for hierarchy "pixel_pll:pll" File: /home/colin/Development/fpga/blinky/top.v Line: 30
+Info (12128): Elaborating entity "pixel_pll" for hierarchy "pixel_pll:pll" File: /home/colin/Development/fpga/blinky/top.v Line: 31
 Info (12128): Elaborating entity "altpll" for hierarchy "pixel_pll:pll|altpll:altpll_component" File: /home/colin/Development/fpga/blinky/pixel_pll.v Line: 95
 Info (12130): Elaborated megafunction instantiation "pixel_pll:pll|altpll:altpll_component" File: /home/colin/Development/fpga/blinky/pixel_pll.v Line: 95
 Info (12133): Instantiated megafunction "pixel_pll:pll|altpll:altpll_component" with the following parameter: File: /home/colin/Development/fpga/blinky/pixel_pll.v Line: 95
@@ -1040,94 +916,48 @@ Info (12133): Instantiated megafunction "pixel_pll:pll|altpll:altpll_component" 
 Info (12021): Found 1 design units, including 1 entities, in source file db/pixel_pll_altpll.v
     Info (12023): Found entity 1: pixel_pll_altpll File: /home/colin/Development/fpga/blinky/db/pixel_pll_altpll.v Line: 30
 Info (12128): Elaborating entity "pixel_pll_altpll" for hierarchy "pixel_pll:pll|altpll:altpll_component|pixel_pll_altpll:auto_generated" File: /home/colin/intelFPGA_lite/19.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
-Info (12128): Elaborating entity "screen_rom" for hierarchy "screen_rom:screen" File: /home/colin/Development/fpga/blinky/top.v Line: 36
+Info (12128): Elaborating entity "screen_rom" for hierarchy "screen_rom:screen" File: /home/colin/Development/fpga/blinky/top.v Line: 37
 Info (12128): Elaborating entity "altsyncram" for hierarchy "screen_rom:screen|altsyncram:altsyncram_component" File: /home/colin/Development/fpga/blinky/screen_rom.v Line: 82
 Info (12130): Elaborated megafunction instantiation "screen_rom:screen|altsyncram:altsyncram_component" File: /home/colin/Development/fpga/blinky/screen_rom.v Line: 82
 Info (12133): Instantiated megafunction "screen_rom:screen|altsyncram:altsyncram_component" with the following parameter: File: /home/colin/Development/fpga/blinky/screen_rom.v Line: 82
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
     Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
-    Info (12134): Parameter "init_file" = "/home/colin/Development/python/vga_fpga/out.hex"
+    Info (12134): Parameter "init_file" = "../../python/vga_fpga/out.hex"
     Info (12134): Parameter "intended_device_family" = "MAX 10"
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
-    Info (12134): Parameter "numwords_a" = "38400"
+    Info (12134): Parameter "numwords_a" = "40000"
     Info (12134): Parameter "operation_mode" = "ROM"
     Info (12134): Parameter "outdata_aclr_a" = "NONE"
     Info (12134): Parameter "outdata_reg_a" = "CLOCK0"
     Info (12134): Parameter "widthad_a" = "16"
-    Info (12134): Parameter "width_a" = "3"
+    Info (12134): Parameter "width_a" = "8"
     Info (12134): Parameter "width_byteena_a" = "1"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_r8c1.tdf
-    Info (12023): Found entity 1: altsyncram_r8c1 File: /home/colin/Development/fpga/blinky/db/altsyncram_r8c1.tdf Line: 32
-Info (12128): Elaborating entity "altsyncram_r8c1" for hierarchy "screen_rom:screen|altsyncram:altsyncram_component|altsyncram_r8c1:auto_generated" File: /home/colin/intelFPGA_lite/19.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_e8a1.tdf
+    Info (12023): Found entity 1: altsyncram_e8a1 File: /home/colin/Development/fpga/blinky/db/altsyncram_e8a1.tdf Line: 32
+Info (12128): Elaborating entity "altsyncram_e8a1" for hierarchy "screen_rom:screen|altsyncram:altsyncram_component|altsyncram_e8a1:auto_generated" File: /home/colin/intelFPGA_lite/19.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Critical Warning (127005): Memory depth (40000) in the design file differs from memory depth (38400) in the Memory Initialization File "/home/colin/Development/python/vga_fpga/out.hex" -- setting initial value for remaining addresses to 0 File: /home/colin/Development/fpga/blinky/screen_rom.v Line: 82
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_7j9.tdf
     Info (12023): Found entity 1: decode_7j9 File: /home/colin/Development/fpga/blinky/db/decode_7j9.tdf Line: 23
-Info (12128): Elaborating entity "decode_7j9" for hierarchy "screen_rom:screen|altsyncram:altsyncram_component|altsyncram_r8c1:auto_generated|decode_7j9:rden_decode" File: /home/colin/Development/fpga/blinky/db/altsyncram_r8c1.tdf Line: 41
-Info (12021): Found 1 design units, including 1 entities, in source file db/mux_p1b.tdf
-    Info (12023): Found entity 1: mux_p1b File: /home/colin/Development/fpga/blinky/db/mux_p1b.tdf Line: 23
-Info (12128): Elaborating entity "mux_p1b" for hierarchy "screen_rom:screen|altsyncram:altsyncram_component|altsyncram_r8c1:auto_generated|mux_p1b:mux2" File: /home/colin/Development/fpga/blinky/db/altsyncram_r8c1.tdf Line: 42
-Warning (14284): Synthesized away the following node(s):
-    Warning (14285): Synthesized away the following RAM node(s):
-        Warning (14320): Synthesized away node "screen_rom:screen|altsyncram:altsyncram_component|altsyncram_r8c1:auto_generated|ram_block1a1" File: /home/colin/Development/fpga/blinky/db/altsyncram_r8c1.tdf Line: 65
-        Warning (14320): Synthesized away node "screen_rom:screen|altsyncram:altsyncram_component|altsyncram_r8c1:auto_generated|ram_block1a2" File: /home/colin/Development/fpga/blinky/db/altsyncram_r8c1.tdf Line: 87
-        Warning (14320): Synthesized away node "screen_rom:screen|altsyncram:altsyncram_component|altsyncram_r8c1:auto_generated|ram_block1a4" File: /home/colin/Development/fpga/blinky/db/altsyncram_r8c1.tdf Line: 131
-        Warning (14320): Synthesized away node "screen_rom:screen|altsyncram:altsyncram_component|altsyncram_r8c1:auto_generated|ram_block1a5" File: /home/colin/Development/fpga/blinky/db/altsyncram_r8c1.tdf Line: 153
-        Warning (14320): Synthesized away node "screen_rom:screen|altsyncram:altsyncram_component|altsyncram_r8c1:auto_generated|ram_block1a7" File: /home/colin/Development/fpga/blinky/db/altsyncram_r8c1.tdf Line: 197
-        Warning (14320): Synthesized away node "screen_rom:screen|altsyncram:altsyncram_component|altsyncram_r8c1:auto_generated|ram_block1a8" File: /home/colin/Development/fpga/blinky/db/altsyncram_r8c1.tdf Line: 219
-        Warning (14320): Synthesized away node "screen_rom:screen|altsyncram:altsyncram_component|altsyncram_r8c1:auto_generated|ram_block1a10" File: /home/colin/Development/fpga/blinky/db/altsyncram_r8c1.tdf Line: 263
-        Warning (14320): Synthesized away node "screen_rom:screen|altsyncram:altsyncram_component|altsyncram_r8c1:auto_generated|ram_block1a11" File: /home/colin/Development/fpga/blinky/db/altsyncram_r8c1.tdf Line: 285
-        Warning (14320): Synthesized away node "screen_rom:screen|altsyncram:altsyncram_component|altsyncram_r8c1:auto_generated|ram_block1a13" File: /home/colin/Development/fpga/blinky/db/altsyncram_r8c1.tdf Line: 329
-        Warning (14320): Synthesized away node "screen_rom:screen|altsyncram:altsyncram_component|altsyncram_r8c1:auto_generated|ram_block1a14" File: /home/colin/Development/fpga/blinky/db/altsyncram_r8c1.tdf Line: 351
-Info (278001): Inferred 2 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Div0" File: /home/colin/Development/fpga/blinky/top.v Line: 34
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0" File: /home/colin/Development/fpga/blinky/top.v Line: 34
-Info (12130): Elaborated megafunction instantiation "lpm_divide:Div0" File: /home/colin/Development/fpga/blinky/top.v Line: 34
-Info (12133): Instantiated megafunction "lpm_divide:Div0" with the following parameter: File: /home/colin/Development/fpga/blinky/top.v Line: 34
-    Info (12134): Parameter "LPM_WIDTHN" = "33"
-    Info (12134): Parameter "LPM_WIDTHD" = "3"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_mtl.tdf
-    Info (12023): Found entity 1: lpm_divide_mtl File: /home/colin/Development/fpga/blinky/db/lpm_divide_mtl.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_olh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_olh File: /home/colin/Development/fpga/blinky/db/sign_div_unsign_olh.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_qhe.tdf
-    Info (12023): Found entity 1: alt_u_div_qhe File: /home/colin/Development/fpga/blinky/db/alt_u_div_qhe.tdf Line: 27
-Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_t3c.tdf
-    Info (12023): Found entity 1: add_sub_t3c File: /home/colin/Development/fpga/blinky/db/add_sub_t3c.tdf Line: 23
-Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_u3c.tdf
-    Info (12023): Found entity 1: add_sub_u3c File: /home/colin/Development/fpga/blinky/db/add_sub_u3c.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0" File: /home/colin/Development/fpga/blinky/top.v Line: 34
-Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter: File: /home/colin/Development/fpga/blinky/top.v Line: 34
-    Info (12134): Parameter "LPM_WIDTHA" = "33"
-    Info (12134): Parameter "LPM_WIDTHB" = "10"
-    Info (12134): Parameter "LPM_WIDTHP" = "43"
-    Info (12134): Parameter "LPM_WIDTHR" = "43"
-    Info (12134): Parameter "LPM_WIDTHS" = "1"
-    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
-    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
-    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
-Info (12021): Found 1 design units, including 1 entities, in source file db/mult_brs.tdf
-    Info (12023): Found entity 1: mult_brs File: /home/colin/Development/fpga/blinky/db/mult_brs.tdf Line: 31
+Info (12128): Elaborating entity "decode_7j9" for hierarchy "screen_rom:screen|altsyncram:altsyncram_component|altsyncram_e8a1:auto_generated|decode_7j9:rden_decode" File: /home/colin/Development/fpga/blinky/db/altsyncram_e8a1.tdf Line: 41
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_u1b.tdf
+    Info (12023): Found entity 1: mux_u1b File: /home/colin/Development/fpga/blinky/db/mux_u1b.tdf Line: 23
+Info (12128): Elaborating entity "mux_u1b" for hierarchy "screen_rom:screen|altsyncram:altsyncram_component|altsyncram_e8a1:auto_generated|mux_u1b:mux2" File: /home/colin/Development/fpga/blinky/db/altsyncram_e8a1.tdf Line: 42
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (13014): Ignored 40 buffer(s)
-    Info (13019): Ignored 40 SOFT buffer(s)
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 585 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 256 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 5 output pins
-    Info (21061): Implemented 569 logic cells
-    Info (21064): Implemented 5 RAM segments
+    Info (21061): Implemented 209 logic cells
+    Info (21064): Implemented 40 RAM segments
     Info (21065): Implemented 1 PLLs
-    Info (21062): Implemented 4 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
-    Info: Peak virtual memory: 1242 megabytes
-    Info: Processing ended: Tue Mar 24 15:15:16 2020
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:22
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 1225 megabytes
+    Info: Processing ended: Tue Mar 24 20:34:56 2020
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:20
 
 
