@@ -1,5 +1,5 @@
 Power Analyzer report for top
-Tue Mar 24 20:35:05 2020
+Tue Apr 14 08:31:46 2020
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -53,55 +53,57 @@ https://fpgasoftware.intel.com/eula.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.36        ;
+; Average used               ; 1.52        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;  12.1%      ;
+;     Processors 2-4         ;  17.4%      ;
 +----------------------------+-------------+
 
 
 +-------------------------------------------------------------------------------------------+
 ; Power Analyzer Summary                                                                    ;
 +----------------------------------------+--------------------------------------------------+
-; Power Analyzer Status                  ; Successful - Tue Mar 24 20:35:05 2020            ;
+; Power Analyzer Status                  ; Successful - Tue Apr 14 08:31:46 2020            ;
 ; Quartus Prime Version                  ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition      ;
 ; Revision Name                          ; top                                              ;
 ; Top-level Entity Name                  ; top                                              ;
 ; Family                                 ; MAX 10                                           ;
 ; Device                                 ; 10M08SAU169C8G                                   ;
 ; Power Models                           ; Final                                            ;
-; Total Thermal Power Dissipation        ; 158.69 mW                                        ;
+; Total Thermal Power Dissipation        ; 158.87 mW                                        ;
 ; Core Dynamic Thermal Power Dissipation ; 0.00 mW                                          ;
 ; Core Static Thermal Power Dissipation  ; 121.10 mW                                        ;
-; I/O Thermal Power Dissipation          ; 37.59 mW                                         ;
+; I/O Thermal Power Dissipation          ; 37.77 mW                                         ;
 ; Power Estimation Confidence            ; Low: user provided insufficient toggle rate data ;
 +----------------------------------------+--------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------+
-; Power Analyzer Settings                                                                    ;
-+------------------------------------------------------------------+---------+---------------+
-; Option                                                           ; Setting ; Default Value ;
-+------------------------------------------------------------------+---------+---------------+
-; Use smart compilation                                            ; Off     ; Off           ;
-; Enable parallel Assembler and Timing Analyzer during compilation ; On      ; On            ;
-; Enable compact report table                                      ; Off     ; Off           ;
-; Default Power Toggle Rate                                        ; 12.5%   ; 12.5%         ;
-; Default Power Input I/O Toggle Rate                              ; 12.5%   ; 12.5%         ;
-; Use vectorless estimation                                        ; On      ; On            ;
-; Use Input Files                                                  ; Off     ; Off           ;
-; Filter Glitches in VCD File Reader                               ; On      ; On            ;
-; Power Analyzer Report Signal Activity                            ; Off     ; Off           ;
-; Power Analyzer Report Power Dissipation                          ; Off     ; Off           ;
-; Device Power Characteristics                                     ; TYPICAL ; TYPICAL       ;
-; Automatically Compute Junction Temperature                       ; On      ; On            ;
-; Specified Junction Temperature                                   ; 25      ; 25            ;
-; Ambient Temperature                                              ; 25      ; 25            ;
-; Use Custom Cooling Solution                                      ; Off     ; Off           ;
-; Board Temperature                                                ; 25      ; 25            ;
-+------------------------------------------------------------------+---------+---------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Power Analyzer Settings                                                                                                  ;
++------------------------------------------------------------------+---------------------------------------+---------------+
+; Option                                                           ; Setting                               ; Default Value ;
++------------------------------------------------------------------+---------------------------------------+---------------+
+; Use smart compilation                                            ; Off                                   ; Off           ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                                    ; On            ;
+; Enable compact report table                                      ; Off                                   ; Off           ;
+; Default Power Input I/O Toggle Rate                              ; 12.5%                                 ; 12.5%         ;
+; Preset Cooling Solution                                          ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ;               ;
+; Board thermal model                                              ; None (CONSERVATIVE)                   ;               ;
+; Default Power Toggle Rate                                        ; 12.5%                                 ; 12.5%         ;
+; Use vectorless estimation                                        ; On                                    ; On            ;
+; Use Input Files                                                  ; Off                                   ; Off           ;
+; Filter Glitches in VCD File Reader                               ; On                                    ; On            ;
+; Power Analyzer Report Signal Activity                            ; Off                                   ; Off           ;
+; Power Analyzer Report Power Dissipation                          ; Off                                   ; Off           ;
+; Device Power Characteristics                                     ; TYPICAL                               ; TYPICAL       ;
+; Automatically Compute Junction Temperature                       ; On                                    ; On            ;
+; Specified Junction Temperature                                   ; 25                                    ; 25            ;
+; Ambient Temperature                                              ; 25                                    ; 25            ;
+; Use Custom Cooling Solution                                      ; Off                                   ; Off           ;
+; Board Temperature                                                ; 25                                    ; 25            ;
++------------------------------------------------------------------+---------------------------------------+---------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------+
@@ -110,7 +112,10 @@ https://fpgasoftware.intel.com/eula.
 ; Node                                                                                           ; Reason                      ;
 +------------------------------------------------------------------------------------------------+-----------------------------+
 ; pixel_pll:pll|altpll:altpll_component|pixel_pll_altpll:auto_generated|wire_pll1_clk[0]         ; No valid clock domain found ;
+; SSEL                                                                                           ; No valid clock domain found ;
 ; clk                                                                                            ; No valid clock domain found ;
+; MOSI                                                                                           ; No valid clock domain found ;
+; SCK                                                                                            ; No valid clock domain found ;
 ; pixel_pll:pll|altpll:altpll_component|pixel_pll_altpll:auto_generated|wire_pll1_clk[0]~clkctrl ; No valid clock domain found ;
 +------------------------------------------------------------------------------------------------+-----------------------------+
 
@@ -154,28 +159,29 @@ https://fpgasoftware.intel.com/eula.
 ; M9K                ; 0.00 mW                           ; 0.00 mW                     ; --                             ; 0.00 mW                       ;    0.000                                                  ;
 ; Combinational cell ; 0.00 mW                           ; 0.00 mW                     ; --                             ; 0.00 mW                       ;    0.000                                                  ;
 ; Register cell      ; 0.00 mW                           ; 0.00 mW                     ; --                             ; 0.00 mW                       ;    0.000                                                  ;
-; I/O                ; 0.63 mW                           ; 0.00 mW                     ; 0.63 mW                        ; 0.00 mW                       ;    0.000                                                  ;
+; I/O                ; 0.81 mW                           ; 0.00 mW                     ; 0.81 mW                        ; 0.00 mW                       ;    0.000                                                  ;
 ; Voltage Regulator  ; 0.76 mW                           ; 0.00 mW                     ; 0.76 mW                        ; --                            ; --                                                        ;
 +--------------------+-----------------------------------+-----------------------------+--------------------------------+-------------------------------+-----------------------------------------------------------+
 (1) The "Block Thermal Static Power" for all block types except Pins and the Voltage Regulator, if one exists, is part of the "Core Static Thermal Power Dissipation" value found on the PowerPlay Power Analyzer-->Summary report panel. The "Core Static Thermal Power Dissipation" also contains the thermal static power dissipated by the routing.
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Thermal Power Dissipation by Hierarchy                                                                                                                                                                                                                                                                       ;
-+----------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+--------------------------------------------------------------------------------------------------------------+
-; Compilation Hierarchy Node                   ; Total Thermal Power by Hierarchy (1) ; Block Thermal Dynamic Power (1) ; Block Thermal Static Power (1)(2) ; Routing Thermal Dynamic Power (1) ; Full Hierarchy Name                                                                                          ;
-+----------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+--------------------------------------------------------------------------------------------------------------+
-; |top                                         ; 1.39 mW (1.39 mW)                    ; 0.00 mW (0.00 mW)               ; 1.39 mW (1.39 mW)                 ; 0.00 mW (0.00 mW)                 ; |top                                                                                                         ;
-;     |hard_block:auto_generated_inst          ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top|hard_block:auto_generated_inst                                                                          ;
-;     |pixel_pll:pll                           ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top|pixel_pll:pll                                                                                           ;
-;         |altpll:altpll_component             ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top|pixel_pll:pll|altpll:altpll_component                                                                   ;
-;             |pixel_pll_altpll:auto_generated ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top|pixel_pll:pll|altpll:altpll_component|pixel_pll_altpll:auto_generated                                   ;
-;     |screen_rom:screen                       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top|screen_rom:screen                                                                                       ;
-;         |altsyncram:altsyncram_component     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top|screen_rom:screen|altsyncram:altsyncram_component                                                       ;
-;             |altsyncram_e8a1:auto_generated  ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top|screen_rom:screen|altsyncram:altsyncram_component|altsyncram_e8a1:auto_generated                        ;
-;                 |mux_u1b:mux2                ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top|screen_rom:screen|altsyncram:altsyncram_component|altsyncram_e8a1:auto_generated|mux_u1b:mux2           ;
-;                 |decode_7j9:rden_decode      ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top|screen_rom:screen|altsyncram:altsyncram_component|altsyncram_e8a1:auto_generated|decode_7j9:rden_decode ;
-+----------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+--------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Thermal Power Dissipation by Hierarchy                                                                                                                                                                                                                                                                   ;
++----------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+----------------------------------------------------------------------------------------------------------+
+; Compilation Hierarchy Node                   ; Total Thermal Power by Hierarchy (1) ; Block Thermal Dynamic Power (1) ; Block Thermal Static Power (1)(2) ; Routing Thermal Dynamic Power (1) ; Full Hierarchy Name                                                                                      ;
++----------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+----------------------------------------------------------------------------------------------------------+
+; |top                                         ; 1.57 mW (1.57 mW)                    ; 0.00 mW (0.00 mW)               ; 1.57 mW (1.57 mW)                 ; 0.00 mW (0.00 mW)                 ; |top                                                                                                     ;
+;     |hard_block:auto_generated_inst          ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top|hard_block:auto_generated_inst                                                                      ;
+;     |pixel_pll:pll                           ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top|pixel_pll:pll                                                                                       ;
+;         |altpll:altpll_component             ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top|pixel_pll:pll|altpll:altpll_component                                                               ;
+;             |pixel_pll_altpll:auto_generated ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top|pixel_pll:pll|altpll:altpll_component|pixel_pll_altpll:auto_generated                               ;
+;     |screen_ram:screen                       ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top|screen_ram:screen                                                                                   ;
+;         |altsyncram:altsyncram_component     ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top|screen_ram:screen|altsyncram:altsyncram_component                                                   ;
+;             |altsyncram_piq1:auto_generated  ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top|screen_ram:screen|altsyncram:altsyncram_component|altsyncram_piq1:auto_generated                    ;
+;                 |decode_e7a:decode2          ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top|screen_ram:screen|altsyncram:altsyncram_component|altsyncram_piq1:auto_generated|decode_e7a:decode2 ;
+;                 |mux_u1b:mux3                ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top|screen_ram:screen|altsyncram:altsyncram_component|altsyncram_piq1:auto_generated|mux_u1b:mux3       ;
+;     |SPI_Slave:spi                           ; 0.00 mW (0.00 mW)                    ; 0.00 mW (0.00 mW)               ; --                                ; 0.00 mW (0.00 mW)                 ; |top|SPI_Slave:spi                                                                                       ;
++----------------------------------------------+--------------------------------------+---------------------------------+-----------------------------------+-----------------------------------+----------------------------------------------------------------------------------------------------------+
 (1) Value in parentheses is the power consumed at that level of hierarchy. Value not in parentheses is the power consumed at that level of hierarchy plus the power consumed by all levels of hierarchy below it.
 
 (2) The "Block Thermal Static Power" for all levels of hierarchy except the top-level hierarchy is part of the "Core Static Thermal Power Dissipation" value found on the PowerPlay Power Analyzer-->Summary report panel. The "Core Static Thermal Power Dissipation" also contains the thermal static power dissipated by the routing.
@@ -195,7 +201,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
 ; Voltage Supply ; Total Current Drawn (1) ; Dynamic Current Drawn (1) ; Static Current Drawn (1) ; Minimum Power Supply Current (2) ;
 +----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
-; VCCIO          ; 11.43 mA                ; 0.00 mA                   ; 11.43 mA                 ; 11.43 mA                         ;
+; VCCIO          ; 11.50 mA                ; 0.00 mA                   ; 11.50 mA                 ; 11.50 mA                         ;
 ; VCCA           ; 3.03 mA                 ; 0.00 mA                   ; 3.03 mA                  ; 3.03 mA                          ;
 ; VCC_ONE        ; 37.34 mA                ; 0.00 mA                   ; 37.34 mA                 ; 37.34 mA                         ;
 +----------------+-------------------------+---------------------------+--------------------------+----------------------------------+
@@ -213,7 +219,7 @@ https://fpgasoftware.intel.com/eula.
 ; 2        ; 3.3V          ; 1.67 mA             ; 0.00 mA               ; 1.67 mA              ;
 ; 3        ; 3.3V          ; 1.60 mA             ; 0.00 mA               ; 1.60 mA              ;
 ; 4        ; --            ; --                  ; --                    ; --                   ;
-; 5        ; 3.3V          ; 1.63 mA             ; 0.00 mA               ; 1.63 mA              ;
+; 5        ; 3.3V          ; 1.70 mA             ; 0.00 mA               ; 1.70 mA              ;
 ; 6        ; 3.3V          ; 1.60 mA             ; 0.00 mA               ; 1.60 mA              ;
 ; 7        ; --            ; --                  ; --                    ; --                   ;
 ; 8        ; 3.3V          ; 1.66 mA             ; 0.00 mA               ; 1.66 mA              ;
@@ -225,37 +231,37 @@ https://fpgasoftware.intel.com/eula.
 +---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
 ; VCCIO Voltage ; Total Current Drawn (1) ; Dynamic Current Drawn (1) ; Static Current Drawn (1) ; Minimum Power Supply Current (2) ;
 +---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
-; 3.3V          ; 11.43 mA                ; 0.00 mA                   ; 11.43 mA                 ; 11.43 mA                         ;
+; 3.3V          ; 11.50 mA                ; 0.00 mA                   ; 11.50 mA                 ; 11.50 mA                         ;
 +---------------+-------------------------+---------------------------+--------------------------+----------------------------------+
 (1) Currents reported in columns "Total Current Drawn", "Dynamic Current Drawn", and "Static Current Drawn" are sufficient for user operation of the device.  
 (2) Currents reported in column "Minimum Power Supply Current" are sufficient for power-up, configuration, and user operation of the device.
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Confidence Metric Details                                                                                                                       ;
-+----------------------------------------------------------------------------------------+-------------+-----------+--------------+---------------+
-; Data Source                                                                            ; Total       ; Pin       ; Registered   ; Combinational ;
-+----------------------------------------------------------------------------------------+-------------+-----------+--------------+---------------+
-; Simulation (from file)                                                                 ;             ;           ;              ;               ;
-;     -- Number of signals with Toggle Rate from Simulation                              ; 0 (0.0%)    ; 0 (0.0%)  ; 0 (0.0%)     ; 0 (0.0%)      ;
-;     -- Number of signals with Static Probability from Simulation                       ; 0 (0.0%)    ; 0 (0.0%)  ; 0 (0.0%)     ; 0 (0.0%)      ;
-;                                                                                        ;             ;           ;              ;               ;
-; Node, entity or clock assignment                                                       ;             ;           ;              ;               ;
-;     -- Number of signals with Toggle Rate from Node, entity or clock assignment        ; 0 (0.0%)    ; 0 (0.0%)  ; 0 (0.0%)     ; 0 (0.0%)      ;
-;     -- Number of signals with Static Probability from Node, entity or clock assignment ; 1 (0.2%)    ; 0 (0.0%)  ; 0 (0.0%)     ; 1 (0.3%)      ;
-;                                                                                        ;             ;           ;              ;               ;
-; Vectorless estimation                                                                  ;             ;           ;              ;               ;
-;     -- Number of signals with Toggle Rate from Vectorless estimation                   ; 428 (97.9%) ; 6 (42.9%) ; 112 (100.0%) ; 310 (99.7%)   ;
-;     -- Number of signals with Zero toggle rate, from Vectorless estimation             ; 6 (1.4%)    ; 1 (7.1%)  ; 0 (0.0%)     ; 5 (1.6%)      ;
-;     -- Number of signals with Static Probability from Vectorless estimation            ; 427 (97.7%) ; 6 (42.9%) ; 112 (100.0%) ; 309 (99.4%)   ;
-;                                                                                        ;             ;           ;              ;               ;
-; Default assignment                                                                     ;             ;           ;              ;               ;
-;     -- Number of signals with Toggle Rate from Default assignment                      ; 0 (0.0%)    ; 0 (0.0%)  ; 0 (0.0%)     ; 0 (0.0%)      ;
-;     -- Number of signals with Static Probability from Default assignment               ; 9 (2.1%)    ; 8 (57.1%) ; 0 (0.0%)     ; 1 (0.3%)      ;
-;                                                                                        ;             ;           ;              ;               ;
-; Assumed 0                                                                              ;             ;           ;              ;               ;
-;     -- Number of signals with Toggle Rate assumed 0                                    ; 9 (2.1%)    ; 8 (57.1%) ; 0 (0.0%)     ; 1 (0.3%)      ;
-+----------------------------------------------------------------------------------------+-------------+-----------+--------------+---------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Confidence Metric Details                                                                                                                        ;
++----------------------------------------------------------------------------------------+-------------+------------+--------------+---------------+
+; Data Source                                                                            ; Total       ; Pin        ; Registered   ; Combinational ;
++----------------------------------------------------------------------------------------+-------------+------------+--------------+---------------+
+; Simulation (from file)                                                                 ;             ;            ;              ;               ;
+;     -- Number of signals with Toggle Rate from Simulation                              ; 0 (0.0%)    ; 0 (0.0%)   ; 0 (0.0%)     ; 0 (0.0%)      ;
+;     -- Number of signals with Static Probability from Simulation                       ; 0 (0.0%)    ; 0 (0.0%)   ; 0 (0.0%)     ; 0 (0.0%)      ;
+;                                                                                        ;             ;            ;              ;               ;
+; Node, entity or clock assignment                                                       ;             ;            ;              ;               ;
+;     -- Number of signals with Toggle Rate from Node, entity or clock assignment        ; 0 (0.0%)    ; 0 (0.0%)   ; 0 (0.0%)     ; 0 (0.0%)      ;
+;     -- Number of signals with Static Probability from Node, entity or clock assignment ; 1 (0.1%)    ; 0 (0.0%)   ; 0 (0.0%)     ; 1 (0.2%)      ;
+;                                                                                        ;             ;            ;              ;               ;
+; Vectorless estimation                                                                  ;             ;            ;              ;               ;
+;     -- Number of signals with Toggle Rate from Vectorless estimation                   ; 678 (98.4%) ; 8 (44.4%)  ; 198 (100.0%) ; 472 (99.8%)   ;
+;     -- Number of signals with Zero toggle rate, from Vectorless estimation             ; 27 (3.9%)   ; 1 (5.6%)   ; 7 (3.5%)     ; 19 (4.0%)     ;
+;     -- Number of signals with Static Probability from Vectorless estimation            ; 677 (98.3%) ; 8 (44.4%)  ; 198 (100.0%) ; 471 (99.6%)   ;
+;                                                                                        ;             ;            ;              ;               ;
+; Default assignment                                                                     ;             ;            ;              ;               ;
+;     -- Number of signals with Toggle Rate from Default assignment                      ; 0 (0.0%)    ; 0 (0.0%)   ; 0 (0.0%)     ; 0 (0.0%)      ;
+;     -- Number of signals with Static Probability from Default assignment               ; 11 (1.6%)   ; 10 (55.6%) ; 0 (0.0%)     ; 1 (0.2%)      ;
+;                                                                                        ;             ;            ;              ;               ;
+; Assumed 0                                                                              ;             ;            ;              ;               ;
+;     -- Number of signals with Toggle Rate assumed 0                                    ; 11 (1.6%)   ; 10 (55.6%) ; 0 (0.0%)     ; 1 (0.2%)      ;
++----------------------------------------------------------------------------------------+-------------+------------+--------------+---------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------+
@@ -272,29 +278,36 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Power Analyzer
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Tue Mar 24 20:35:03 2020
+    Info: Processing started: Tue Apr 14 08:31:44 2020
 Info: Command: quartus_pow --read_settings_files=off --write_settings_files=off top -c top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (21077): Low junction temperature is 0 degrees C
 Info (21077): High junction temperature is 85 degrees C
-Critical Warning (332012): Synopsys Design Constraints File file not found: 'top.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332104): Reading SDC File: 'top.sdc'
+Info (332110): Deriving PLL clocks
+    Info (332110): create_generated_clock -source {pll|altpll_component|auto_generated|pll1|inclk[0]} -divide_by 12 -multiply_by 25 -duty_cycle 50.00 -name {pll|altpll_component|auto_generated|pll1|clk[0]} {pll|altpll_component|auto_generated|pll1|clk[0]}
+Info (332151): Clock uncertainty is not calculated until you update the timing netlist.
+Warning (332087): The master clock for this clock assignment could not be derived.  Clock: pll|altpll_component|auto_generated|pll1|clk[0] was not created.
+    Warning (332035): No clocks found on or feeding the specified source node: pll|altpll_component|auto_generated|pll1|inclk[0]
 Warning (332060): Node: clk was determined to be a clock but was found without an associated clock assignment.
     Info (13166): Register h_pixel_count[8] is being clocked by clk
-Warning (332068): No clocks defined in design.
+Warning (332060): Node: SCK was determined to be a clock but was found without an associated clock assignment.
+    Info (13166): Register SPI_Slave:spi|r_RX_Done is being clocked by SCK
+Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
 Warning (332056): PLL cross checking found inconsistent PLL clock settings:
     Warning (332056): Node: pll|altpll_component|auto_generated|pll1|clk[0] was found missing 1 generated clock that corresponds to a base clock with a period of: 83.333
+Warning (332061): Virtual clock clk is never referenced in any input or output delay assignment.
 Info (223000): Starting Vectorless Power Activity Estimation
 Warning (222013): Relative toggle rates could not be calculated because no clock domain could be identified for some nodes
 Info (223001): Completed Vectorless Power Activity Estimation
 Info (218000): Using Advanced I/O Power to simulate I/O buffers with the specified board trace model
-Warning (215044): No board thermal model was selected.  Analyzing without board thermal modeling.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (215049): Average toggle rate for this design is 0.000 millions of transitions / sec
-Info (215031): Total thermal power estimate for the design is 158.69 mW
-Info: Quartus Prime Power Analyzer was successful. 0 errors, 8 warnings
-    Info: Peak virtual memory: 1435 megabytes
-    Info: Processing ended: Tue Mar 24 20:35:05 2020
+Info (215031): Total thermal power estimate for the design is 158.87 mW
+Info: Quartus Prime Power Analyzer was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 1437 megabytes
+    Info: Processing ended: Tue Apr 14 08:31:46 2020
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

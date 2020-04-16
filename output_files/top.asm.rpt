@@ -1,5 +1,5 @@
 Assembler report for top
-Tue Mar 24 20:35:02 2020
+Tue Apr 14 08:31:44 2020
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Mar 24 20:35:02 2020 ;
+; Assembler Status      ; Successful - Tue Apr 14 08:31:44 2020 ;
 ; Revision Name         ; top                                   ;
 ; Top-level Entity Name ; top                                   ;
 ; Family                ; MAX 10                                ;
@@ -67,8 +67,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------+------------------+
 ; Option         ; Setting          ;
 +----------------+------------------+
-; JTAG usercode  ; 0x004D6DFA       ;
-; Checksum       ; 0x004D6DFA       ;
+; JTAG usercode  ; 0x00A15043       ;
+; Checksum       ; 0x00A15043       ;
 +----------------+------------------+
 
 
@@ -78,15 +78,15 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Tue Mar 24 20:35:02 2020
+    Info: Processing started: Tue Apr 14 08:31:43 2020
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off top -c top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 1023 megabytes
-    Info: Processing ended: Tue Mar 24 20:35:02 2020
-    Info: Elapsed time: 00:00:00
+    Info: Peak virtual memory: 1026 megabytes
+    Info: Processing ended: Tue Apr 14 08:31:44 2020
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

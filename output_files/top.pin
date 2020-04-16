@@ -181,10 +181,10 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : J6        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : J7        :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : J8        :        :                   :         : 3         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : J9        :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : J10       :        :                   :         : 5         :                
+SCK                          : J10       : input  : 3.3-V LVTTL       :         : 5         : Y              
 VCCIO5                       : J11       : power  :                   : 3.3V    : 5         :                
 v_sync                       : J12       : output : 3.3-V LVTTL       :         : 5         : Y              
-RESERVED_INPUT_WITH_WEAK_PULLUP : J13       :        :                   :         : 5         :                
+MOSI                         : J13       : input  : 3.3-V LVTTL       :         : 5         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : K1        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : K2        :        :                   :         : 2         :                
 VCCIO2                       : K3        : power  :                   : 3.3V    : 2         :                
@@ -195,8 +195,8 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : K7        :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : K8        :        :                   :         : 3         :                
 VCCA4                        : K9        : power  :                   : 3.0V/3.3V :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : K10       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : K11       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : K12       :        :                   :         : 5         :                
+MISO                         : K11       : output : 3.3-V LVTTL       :         : 5         : Y              
+SSEL                         : K12       : input  : 3.3-V LVTTL       :         : 5         : Y              
 RESERVED_INPUT_WITH_WEAK_PULLUP : K13       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : L1        :        :                   :         : 2         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : L2        :        :                   :         : 2         :                

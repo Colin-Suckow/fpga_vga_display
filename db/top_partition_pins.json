@@ -22,6 +22,22 @@
 				{
 					"name" : "red",
 					"strict" : false
+				},
+				{
+					"name" : "MISO",
+					"strict" : false
+				},
+				{
+					"name" : "SSEL",
+					"strict" : false
+				},
+				{
+					"name" : "MOSI",
+					"strict" : false
+				},
+				{
+					"name" : "SCK",
+					"strict" : false
 				}
 			]
 		}

@@ -1,5 +1,5 @@
 IP Upgrade report for top
-Tue Mar 24 15:32:18 2020
+Tue Apr  7 17:10:26 2020
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -35,7 +35,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------+
 ; IP Upgrade Summary                                                         ;
 +------------------------------+---------------------------------------------+
-; IP Components Upgrade Status ; Failed - Tue Mar 24 15:32:18 2020           ;
+; IP Components Upgrade Status ; Failed - Tue Apr  7 17:10:26 2020           ;
 ; Quartus Prime Version        ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                ; top                                         ;
 ; Top-level Entity Name        ; top                                         ;
@@ -48,9 +48,9 @@ https://fpgasoftware.intel.com/eula.
 +---------------------+
 Info (23030): Evaluation of Tcl script /home/colin/intelFPGA_lite/19.1/quartus/common/tcl/internal/ip_regen/ip_regen.tcl was successful
 Info: Quartus Prime Shell was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 1239 megabytes
-    Info: Processing ended: Tue Mar 24 15:32:19 2020
+    Info: Peak virtual memory: 1238 megabytes
+    Info: Processing ended: Tue Apr  7 17:10:26 2020
     Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:18
+    Info: Total CPU time (on all processors): 00:00:19
 
 

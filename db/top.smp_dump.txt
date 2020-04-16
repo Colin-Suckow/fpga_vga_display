@@ -1,0 +1,8 @@
+
+State Machine - |top|state
+Name state.WRITE state.DATA state.ADDR_HIGH state.ADDR_LOW state.IDLE 
+state.IDLE 0 0 0 0 0 
+state.ADDR_LOW 0 0 0 1 1 
+state.ADDR_HIGH 0 0 1 0 1 
+state.DATA 0 1 0 0 1 
+state.WRITE 1 0 0 0 1 

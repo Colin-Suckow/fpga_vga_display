@@ -1,0 +1,3 @@
+create_clock -name CLK12M -period 83.333 [get_ports{clk}]
+derive_pll_clocks
+derive_clock_uncertainty
