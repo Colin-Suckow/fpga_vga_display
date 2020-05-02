@@ -32,11 +32,11 @@
 					"strict" : false
 				},
 				{
-					"name" : "MOSI",
+					"name" : "SCK",
 					"strict" : false
 				},
 				{
-					"name" : "SCK",
+					"name" : "MOSI",
 					"strict" : false
 				}
 			]

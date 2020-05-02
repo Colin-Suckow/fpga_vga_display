@@ -1,14 +1,14 @@
 |top
 clk => clk.IN1
-h_sync << h_sync.DB_MAX_OUTPUT_PORT_TYPE
-v_sync << v_sync.DB_MAX_OUTPUT_PORT_TYPE
-green << green.DB_MAX_OUTPUT_PORT_TYPE
-blue << blue.DB_MAX_OUTPUT_PORT_TYPE
-red << red.DB_MAX_OUTPUT_PORT_TYPE
+h_sync <= h_sync.DB_MAX_OUTPUT_PORT_TYPE
+v_sync <= v_sync.DB_MAX_OUTPUT_PORT_TYPE
+green <= green.DB_MAX_OUTPUT_PORT_TYPE
+blue <= blue.DB_MAX_OUTPUT_PORT_TYPE
+red <= red.DB_MAX_OUTPUT_PORT_TYPE
 SCK => SCK.IN1
 SSEL => SSEL.IN1
 MOSI => MOSI.IN1
-MISO << SPI_Slave:spi.o_SPI_MISO
+MISO <= SPI_Slave:spi.o_SPI_MISO
 
 
 |top|pixel_pll:pll

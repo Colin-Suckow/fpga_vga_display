@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top
-Tue Apr 14 08:31:36 2020
+Sat May  2 08:31:43 2020
 Quartus Prime Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
 
 
@@ -56,15 +56,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Apr 14 08:31:36 2020       ;
+; Analysis & Synthesis Status        ; Successful - Sat May  2 08:31:43 2020       ;
 ; Quartus Prime Version              ; 19.1.0 Build 670 09/22/2019 SJ Lite Edition ;
 ; Revision Name                      ; top                                         ;
 ; Top-level Entity Name              ; top                                         ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 333                                         ;
-;     Total combinational functions  ; 281                                         ;
-;     Dedicated logic registers      ; 158                                         ;
-; Total registers                    ; 158                                         ;
+; Total logic elements               ; 341                                         ;
+;     Total combinational functions  ; 288                                         ;
+;     Dedicated logic registers      ; 170                                         ;
+; Total registers                    ; 170                                         ;
 ; Total pins                         ; 10                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 320,000                                     ;
@@ -170,10 +170,12 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
+;     Processors 3-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -212,20 +214,20 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                                  ;
 +---------------------------------------------+----------------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 333                                                                                    ;
+; Estimated Total logic elements              ; 341                                                                                    ;
 ;                                             ;                                                                                        ;
-; Total combinational functions               ; 281                                                                                    ;
+; Total combinational functions               ; 288                                                                                    ;
 ; Logic element usage by number of LUT inputs ;                                                                                        ;
-;     -- 4 input functions                    ; 82                                                                                     ;
-;     -- 3 input functions                    ; 72                                                                                     ;
-;     -- <=2 input functions                  ; 127                                                                                    ;
+;     -- 4 input functions                    ; 102                                                                                    ;
+;     -- 3 input functions                    ; 52                                                                                     ;
+;     -- <=2 input functions                  ; 134                                                                                    ;
 ;                                             ;                                                                                        ;
 ; Logic elements by mode                      ;                                                                                        ;
-;     -- normal mode                          ; 139                                                                                    ;
-;     -- arithmetic mode                      ; 142                                                                                    ;
+;     -- normal mode                          ; 145                                                                                    ;
+;     -- arithmetic mode                      ; 143                                                                                    ;
 ;                                             ;                                                                                        ;
-; Total registers                             ; 158                                                                                    ;
-;     -- Dedicated logic registers            ; 158                                                                                    ;
+; Total registers                             ; 170                                                                                    ;
+;     -- Dedicated logic registers            ; 170                                                                                    ;
 ;     -- I/O registers                        ; 0                                                                                      ;
 ;                                             ;                                                                                        ;
 ; I/O pins                                    ; 10                                                                                     ;
@@ -237,9 +239,9 @@ https://fpgasoftware.intel.com/eula.
 ;     -- PLLs                                 ; 1                                                                                      ;
 ;                                             ;                                                                                        ;
 ; Maximum fan-out node                        ; pixel_pll:pll|altpll:altpll_component|pixel_pll_altpll:auto_generated|wire_pll1_clk[0] ;
-; Maximum fan-out                             ; 180                                                                                    ;
-; Total fan-out                               ; 2423                                                                                   ;
-; Average fan-out                             ; 4.85                                                                                   ;
+; Maximum fan-out                             ; 192                                                                                    ;
+; Total fan-out                               ; 2524                                                                                   ;
+; Average fan-out                             ; 4.86                                                                                   ;
 +---------------------------------------------+----------------------------------------------------------------------------------------+
 
 
@@ -248,7 +250,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------+------------------+--------------+
 ; Compilation Hierarchy Node                 ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                      ; Entity Name      ; Library Name ;
 +--------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------------------------------------------------+------------------+--------------+
-; |top                                       ; 281 (246)           ; 158 (122)                 ; 320000      ; 0          ; 0            ; 0       ; 0         ; 10   ; 0            ; 0          ; |top                                                                                                     ; top              ; work         ;
+; |top                                       ; 288 (253)           ; 170 (134)                 ; 320000      ; 0          ; 0            ; 0       ; 0         ; 10   ; 0            ; 0          ; |top                                                                                                     ; top              ; work         ;
 ;    |SPI_Slave:spi|                         ; 6 (6)               ; 30 (30)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|SPI_Slave:spi                                                                                       ; SPI_Slave        ; work         ;
 ;    |pixel_pll:pll|                         ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|pixel_pll:pll                                                                                       ; pixel_pll        ; work         ;
 ;       |altpll:altpll_component|            ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|pixel_pll:pll|altpll:altpll_component                                                               ; altpll           ; work         ;
@@ -289,7 +291,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; SPI_Slave:spi|r_TX_Byte[0..7]          ; Stuck at GND due to stuck port clock_enable ;
 ; SPI_Slave:spi|r_SPI_MISO_Bit           ; Stuck at GND due to stuck port data_in      ;
 ; SPI_Slave:spi|r_TX_Bit_Count[0..2]     ; Lost fanout                                 ;
-; Total Number of Removed Registers = 12 ;                                             ;
+; pixel_clk_cnt[3,4]                     ; Lost fanout                                 ;
+; Total Number of Removed Registers = 14 ;                                             ;
 +----------------------------------------+---------------------------------------------+
 
 
@@ -308,12 +311,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 158   ;
+; Total registers                              ; 170   ;
 ; Number of registers using Synchronous Clear  ; 49    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 4     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 84    ;
+; Number of registers using Clock Enable       ; 129   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -323,9 +326,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top|byte_count[0]         ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top|init_write_address[0] ;
-; 3:1                ; 33 bits   ; 66 LEs        ; 33 LEs               ; 33 LEs                 ; Yes        ; |top|v_line_count[19]      ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top|byte_count[6]         ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top|init_write_address[9] ;
+; 3:1                ; 33 bits   ; 66 LEs        ; 33 LEs               ; 33 LEs                 ; Yes        ; |top|v_line_count[25]      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
@@ -390,7 +393,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; CLK3_DIVIDE_BY                ; 1                           ; Untyped              ;
 ; CLK2_DIVIDE_BY                ; 1                           ; Untyped              ;
 ; CLK1_DIVIDE_BY                ; 1                           ; Untyped              ;
-; CLK0_DIVIDE_BY                ; 12                          ; Signed Integer       ;
+; CLK0_DIVIDE_BY                ; 3                           ; Signed Integer       ;
 ; CLK9_PHASE_SHIFT              ; 0                           ; Untyped              ;
 ; CLK8_PHASE_SHIFT              ; 0                           ; Untyped              ;
 ; CLK7_PHASE_SHIFT              ; 0                           ; Untyped              ;
@@ -845,27 +848,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 10                          ;
-; cycloneiii_ff         ; 158                         ;
+; cycloneiii_ff         ; 170                         ;
 ;     CLR               ; 4                           ;
-;     ENA               ; 68                          ;
-;     ENA SCLR          ; 16                          ;
-;     SCLR              ; 33                          ;
+;     ENA               ; 80                          ;
+;     ENA SCLR          ; 49                          ;
 ;     plain             ; 37                          ;
 ; cycloneiii_io_obuf    ; 1                           ;
-; cycloneiii_lcell_comb ; 281                         ;
-;     arith             ; 142                         ;
+; cycloneiii_lcell_comb ; 288                         ;
+;     arith             ; 143                         ;
 ;         2 data inputs ; 107                         ;
-;         3 data inputs ; 35                          ;
-;     normal            ; 139                         ;
-;         1 data inputs ; 6                           ;
-;         2 data inputs ; 14                          ;
-;         3 data inputs ; 37                          ;
-;         4 data inputs ; 82                          ;
+;         3 data inputs ; 36                          ;
+;     normal            ; 145                         ;
+;         1 data inputs ; 8                           ;
+;         2 data inputs ; 19                          ;
+;         3 data inputs ; 16                          ;
+;         4 data inputs ; 102                         ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 40                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 7.00                        ;
-; Average LUT depth     ; 3.72                        ;
+; Max LUT depth         ; 5.20                        ;
+; Average LUT depth     ; 3.31                        ;
 +-----------------------+-----------------------------+
 
 
@@ -884,10 +886,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 19.1.0 Build 670 09/22/2019 SJ Lite Edition
-    Info: Processing started: Tue Apr 14 08:31:27 2020
+    Info: Processing started: Sat May  2 08:31:35 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c top
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file sdram.v
+    Info (12023): Found entity 1: SDRAM_ctrl File: /home/colin/Development/fpga/blinky/sdram.v Line: 18
 Info (12021): Found 1 design units, including 1 entities, in source file SPI_Slave.v
     Info (12023): Found entity 1: SPI_Slave File: /home/colin/Development/fpga/blinky/SPI_Slave.v Line: 24
 Info (12021): Found 1 design units, including 1 entities, in source file top.v
@@ -899,13 +903,14 @@ Info (12021): Found 1 design units, including 1 entities, in source file screen_
 Info (12021): Found 1 design units, including 1 entities, in source file screen_ram.v
     Info (12023): Found entity 1: screen_ram File: /home/colin/Development/fpga/blinky/screen_ram.v Line: 40
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at top.v(104): truncated value with size 32 to match size of target (16) File: /home/colin/Development/fpga/blinky/top.v Line: 104
-Info (12128): Elaborating entity "pixel_pll" for hierarchy "pixel_pll:pll" File: /home/colin/Development/fpga/blinky/top.v Line: 47
+Warning (10230): Verilog HDL assignment warning at top.v(58): truncated value with size 32 to match size of target (5) File: /home/colin/Development/fpga/blinky/top.v Line: 58
+Warning (10230): Verilog HDL assignment warning at top.v(117): truncated value with size 32 to match size of target (16) File: /home/colin/Development/fpga/blinky/top.v Line: 117
+Info (12128): Elaborating entity "pixel_pll" for hierarchy "pixel_pll:pll" File: /home/colin/Development/fpga/blinky/top.v Line: 52
 Info (12128): Elaborating entity "altpll" for hierarchy "pixel_pll:pll|altpll:altpll_component" File: /home/colin/Development/fpga/blinky/pixel_pll.v Line: 91
 Info (12130): Elaborated megafunction instantiation "pixel_pll:pll|altpll:altpll_component" File: /home/colin/Development/fpga/blinky/pixel_pll.v Line: 91
 Info (12133): Instantiated megafunction "pixel_pll:pll|altpll:altpll_component" with the following parameter: File: /home/colin/Development/fpga/blinky/pixel_pll.v Line: 91
     Info (12134): Parameter "bandwidth_type" = "AUTO"
-    Info (12134): Parameter "clk0_divide_by" = "12"
+    Info (12134): Parameter "clk0_divide_by" = "3"
     Info (12134): Parameter "clk0_duty_cycle" = "50"
     Info (12134): Parameter "clk0_multiply_by" = "25"
     Info (12134): Parameter "clk0_phase_shift" = "0"
@@ -961,7 +966,7 @@ Info (12133): Instantiated megafunction "pixel_pll:pll|altpll:altpll_component" 
 Info (12021): Found 1 design units, including 1 entities, in source file db/pixel_pll_altpll.v
     Info (12023): Found entity 1: pixel_pll_altpll File: /home/colin/Development/fpga/blinky/db/pixel_pll_altpll.v Line: 30
 Info (12128): Elaborating entity "pixel_pll_altpll" for hierarchy "pixel_pll:pll|altpll:altpll_component|pixel_pll_altpll:auto_generated" File: /home/colin/intelFPGA_lite/19.1/quartus/libraries/megafunctions/altpll.tdf Line: 898
-Info (12128): Elaborating entity "screen_ram" for hierarchy "screen_ram:screen" File: /home/colin/Development/fpga/blinky/top.v Line: 66
+Info (12128): Elaborating entity "screen_ram" for hierarchy "screen_ram:screen" File: /home/colin/Development/fpga/blinky/top.v Line: 78
 Info (12128): Elaborating entity "altsyncram" for hierarchy "screen_ram:screen|altsyncram:altsyncram_component" File: /home/colin/Development/fpga/blinky/screen_ram.v Line: 89
 Info (12130): Elaborated megafunction instantiation "screen_ram:screen|altsyncram:altsyncram_component" File: /home/colin/Development/fpga/blinky/screen_ram.v Line: 89
 Info (12133): Instantiated megafunction "screen_ram:screen|altsyncram:altsyncram_component" with the following parameter: File: /home/colin/Development/fpga/blinky/screen_ram.v Line: 89
@@ -994,25 +999,25 @@ Info (12128): Elaborating entity "decode_e7a" for hierarchy "screen_ram:screen|a
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_u1b.tdf
     Info (12023): Found entity 1: mux_u1b File: /home/colin/Development/fpga/blinky/db/mux_u1b.tdf Line: 23
 Info (12128): Elaborating entity "mux_u1b" for hierarchy "screen_ram:screen|altsyncram:altsyncram_component|altsyncram_piq1:auto_generated|mux_u1b:mux3" File: /home/colin/Development/fpga/blinky/db/altsyncram_piq1.tdf Line: 45
-Info (12128): Elaborating entity "SPI_Slave" for hierarchy "SPI_Slave:spi" File: /home/colin/Development/fpga/blinky/top.v Line: 79
+Info (12128): Elaborating entity "SPI_Slave" for hierarchy "SPI_Slave:spi" File: /home/colin/Development/fpga/blinky/top.v Line: 91
 Warning (10036): Verilog HDL or VHDL warning at SPI_Slave.v(44): object "w_CPOL" assigned a value but never read File: /home/colin/Development/fpga/blinky/SPI_Slave.v Line: 44
 Warning (10230): Verilog HDL assignment warning at SPI_Slave.v(84): truncated value with size 32 to match size of target (3) File: /home/colin/Development/fpga/blinky/SPI_Slave.v Line: 84
 Warning (10230): Verilog HDL assignment warning at SPI_Slave.v(162): truncated value with size 32 to match size of target (3) File: /home/colin/Development/fpga/blinky/SPI_Slave.v Line: 162
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 3 registers lost all their fanouts during netlist optimizations.
+Info (17049): 5 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 385 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 393 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 6 output pins
-    Info (21061): Implemented 334 logic cells
+    Info (21061): Implemented 342 logic cells
     Info (21064): Implemented 40 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 6 warnings
-    Info: Peak virtual memory: 1197 megabytes
-    Info: Processing ended: Tue Apr 14 08:31:36 2020
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:21
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 1013 megabytes
+    Info: Processing ended: Sat May  2 08:31:43 2020
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:19
 
 

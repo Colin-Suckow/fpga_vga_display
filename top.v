@@ -14,7 +14,12 @@ module top (
 	reg [32:0] h_pixel_count;
 	reg [32:0] v_line_count;
 	wire pixel_clk;
+	wire main_clk;
 	wire [7:0] pixel_data;
+	wire [0:7] pixel_data_reverse = pixel_data;
+	reg [0:7] pixel_data_reverse_latch;
+	
+	
 	
 	wire [15:0] write_address;
 	wire [7:0] write_data;
@@ -43,10 +48,17 @@ module top (
 	
 	pixel_pll pll (
 		.inclk0(clk),
-		.c0(pixel_clk)
+		.c0(main_clk)
 	);
 	
+	reg [4:0] pixel_clk_cnt;
 	
+	always @(posedge main_clk)
+	begin
+		pixel_clk_cnt <= pixel_clk_cnt + 1;
+	end
+	
+	assign pixel_clk = pixel_clk_cnt[2];
 	
 	/*
 	screen_rom screen (
@@ -57,7 +69,7 @@ module top (
 	*/
 	
 	screen_ram screen (
-		.clock(pixel_clk),
+		.clock(main_clk),
 		.data(write_data),
 		.rdaddress((((h_pixel_count - HPX_START)/8) + ((v_line_count * 640) / 8))),
 		.wraddress(write_address),
@@ -67,7 +79,7 @@ module top (
 	
 	SPI_Slave spi (
 		.i_Rst_L(1),
-		.i_Clk(pixel_clk),
+		.i_Clk(main_clk),
 		.i_SPI_Clk(SCK),
 		.i_SPI_CS_n(SSEL),
 		.i_SPI_MOSI(MOSI),
@@ -80,8 +92,9 @@ module top (
 	
 	reg [15:0] init_write_address;
 	
-	always @(posedge pixel_clk)
+	always @(posedge main_clk)
 	begin
+	
 		if(SSEL)
 		begin
 			byte_count <= 0;
@@ -97,7 +110,7 @@ module top (
 		begin
 			init_write_address <= message_buffer[23:8];
 		end
-		
+			
 	end
 	
 
@@ -110,28 +123,38 @@ module top (
 		v_line_count <= 0;
 	end
 
-	always @(posedge pixel_clk) begin
+	reg last_pixel_clk;
 	
-		
-		h_pixel_count <= h_pixel_count + 1;
-		if (h_pixel_count >= LINE_COUNT)
+	always @(posedge main_clk) begin
+	
+		if(pixel_clk != last_pixel_clk)
 		begin
-				h_pixel_count <= 0;
-				v_line_count <= v_line_count + 1;
-		end;
+			h_pixel_count <= h_pixel_count + 1;
+			if (h_pixel_count >= LINE_COUNT)
+			begin
+					h_pixel_count <= 0;
+					v_line_count <= v_line_count + 1;
+			end;
+					
+			if (v_line_count >= SCREEN_HEIGHT)
+				v_line_count <= 0;
 				
-		if (v_line_count >= SCREEN_HEIGHT)
-			v_line_count <= 0;
+			pixel_data_reverse_latch <= pixel_data_reverse;
+				
+		end
+		
+		last_pixel_clk <= pixel_clk;
 		
 	end
+	
+	
 
 	assign h_sync = ~((h_pixel_count >= HS_START) & (h_pixel_count < HS_END));
 	assign v_sync = ~((v_line_count >= VS_START) & (v_line_count < VS_END));
 	
-
 	
-	assign green = ((h_pixel_count > HPX_START) & (v_line_count < VPX_END) & pixel_data[((7-h_pixel_count-6)) % 8]);
-	assign red = ((h_pixel_count > HPX_START) & (v_line_count < VPX_END) & pixel_data[(7-h_pixel_count-6) % 8]);
-	assign blue = ((h_pixel_count > HPX_START) & (v_line_count < VPX_END) & pixel_data[(7-h_pixel_count-6) % 8]);
+	assign green = ((h_pixel_count > HPX_START) & (v_line_count < VPX_END) & pixel_data_reverse_latch[h_pixel_count - 1 % 8]);
+	assign red = ((h_pixel_count > HPX_START) & (v_line_count < VPX_END) & pixel_data_reverse_latch[h_pixel_count - 1 % 8]);
+	assign blue = ((h_pixel_count > HPX_START) & (v_line_count < VPX_END) & pixel_data_reverse_latch[h_pixel_count - 1 % 8]);
 
 endmodule
