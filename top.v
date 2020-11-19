@@ -32,6 +32,13 @@ module top (
 	reg [7:0] byte_to_send;
 	wire send_byte;
 	
+	wire sdram_rd_req;
+	wire sdram_wr_req;
+	
+	wire sdram_rd_grant;
+	wire sdram_wr_grant;
+	
+	wire sdram_rd_valid;
 	
 	localparam HS_START = 16;
 	localparam HS_END = 16 + 96;
@@ -59,7 +66,7 @@ module top (
 	end
 	
 	assign pixel_clk = pixel_clk_cnt[2];
-	
+	//Loads picture from internal block rom.
 	/*
 	screen_rom screen (
 		.clock(pixel_clk),
@@ -67,6 +74,7 @@ module top (
 		.q(pixel_data)
 	);
 	*/
+	
 	
 	screen_ram screen (
 		.clock(main_clk),
@@ -76,6 +84,15 @@ module top (
 		.wren(write_enable),
 		.q(pixel_data)
 	);
+	
+// Experimental sdram support. Still working on it
+//	SDRAM_ctrl sdram (
+//		.clk(main_clk),
+//		.RdReq(sdram_rd_req),
+//		.RdAddr(((h_pixel_count - HPX_START)/8) + ((v_line_count * 640) / 8)),
+//		.RdData(pixel_data),
+//		
+//	);
 	
 	SPI_Slave spi (
 		.i_Rst_L(1),
